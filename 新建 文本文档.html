@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学新生校内生活情况调查</title>
+    <style>
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; max-width: 750px; margin: 20px auto; padding: 15px; background-color: #f5f5f5; }
+        .container { background-color: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; font-size: 1.4em; margin-bottom: 10px; }
+        .intro { text-align: center; font-size: 0.9em; color: #7f8c8d; margin-bottom: 25px; line-height: 1.5; }
+        .section-title { font-size: 1.1em; color: #2980b9; margin: 20px 0 15px; padding-bottom: 5px; border-bottom: 2px solid #ecf0f1; }
+        .question { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ecf0f1; }
+        .question-title { font-weight: bold; margin-bottom: 10px; color: #34495e; font-size: 0.95em; line-height: 1.4; }
+        .options label { display: block; margin-bottom: 8px; font-size: 0.9em; cursor: pointer; }
+        .options input[type="checkbox"] { margin-right: 8px; }
+        .submit-btn { display: block; width: 100%; padding: 12px; background-color: #3498db; color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .submit-btn:hover { background-color: #2980b9; }
+        .required { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>大学新生校内生活情况调查问卷</h1>
+        <p class="intro">欢迎新同学！本问卷旨在了解你的在校生活，共50题，均为<b>多选题（可选1-3项）</b>。数据仅用于统计分析，严格保密，感谢你的宝贵时间！</p>
+
+        <form id="survey-form">
+            <!-- 第一部分：基本适应与印象 (8题) -->
+            <div class="section-title">一、基本适应与印象</div>
+            <div class="question">
+                <div class="question-title">1. 你主要通过哪些方式了解并适应大学生活？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q1" value="A"> A. 学长学姐、老乡的介绍</label>
+                    <label><input type="checkbox" name="q1" value="B"> B. 学校官方的新生指南、开学典礼</label>
+                    <label><input type="checkbox" name="q1" value="C"> C. 学生社团、学生组织的招新和活动</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">2. 你对校园的初步印象如何？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q2" value="A"> A. 校园环境优美，设施完善</label>
+                    <label><input type="checkbox" name="q2" value="B"> B. 学习氛围浓厚</label>
+                    <label><input type="checkbox" name="q2" value="C"> C. 生活便利，食堂、超市等配套齐全</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">3. 入学以来，你遇到的主要挑战有哪些？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q3" value="A"> A. 想家，感到孤独</label>
+                    <label><input type="checkbox" name="q3" value="B"> B. 学习方法不适应，感到学业压力大</label>
+                    <label><input type="checkbox" name="q3" value="C"> C. 与室友或同学的人际关系处理</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">4. 你如何安排你的课余时间？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q4" value="A"> A. 在图书馆或自习室学习</label>
+                    <label><input type="checkbox" name="q4" value="B"> B. 参加社团、学生会或志愿活动</label>
+                    <label><input type="checkbox" name="q4" value="C"> C. 运动、娱乐（如打球、玩游戏、追剧）</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">5. 你通常通过什么渠道获取校园资讯？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q5" value="A"> A. 学校官网/官方微信公众号</label>
+                    <label><input type="checkbox" name="q5" value="B"> B. 班级/年级微信群、QQ群</label>
+                    <label><input type="checkbox" name="q5" value="C"> C. 校园海报、同学间口口相传</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">6. 你对学校的教学设施（如教室、实验室）感觉如何？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q6" value="A"> A. 设备先进，环境舒适</label>
+                    <label><input type="checkbox" name="q6" value="B"> B. 基本满足学习需求</label>
+                    <label><input type="checkbox" name="q6" value="C"> C. 部分设施陈旧，有待改善</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">7. 你目前对所学专业的看法是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q7" value="A"> A. 非常感兴趣，符合预期</label>
+                    <label><input type="checkbox" name="q7" value="B"> B. 感觉一般，先学着看</label>
+                    <label><input type="checkbox" name="q7" value="C"> C. 不太感兴趣，有转专业的想法</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">8. 你感觉大学的学习节奏与高中相比？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q8" value="A"> A. 更自由，需要更强的自主性</label>
+                    <label><input type="checkbox" name="q8" value="B"> B. 节奏更快，内容更深</label>
+                    <label><input type="checkbox" name="q8" value="C"> C. 差不多，能适应</label>
+                </div>
+            </div>
+
+            <!-- 第二部分：学习与学术 (8题) -->
+            <div class="section-title">二、学习与学术</div>
+            <div class="question">
+                <div class="question-title">9. 你在课前预习和课后复习方面的情况是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q9" value="A"> A. 坚持预习和复习</label>
+                    <label><input type="checkbox" name="q9" value="B"> B. 偶尔进行，视课程难度而定</label>
+                    <label><input type="checkbox" name="q9" value="C"> C. 很少预习复习，主要靠课堂听讲</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">10. 你遇到学习困难时，通常会怎么做？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q10" value="A"> A. 向老师或助教请教</label>
+                    <label><input type="checkbox" name="q10" value="B"> B. 与同学讨论</label>
+                    <label><input type="checkbox" name="q10" value="C"> C. 自己上网搜索资料或看参考书</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">11. 你平均每天用于自主学习（不含课堂）的时间大约是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q11" value="A"> A. 1小时以内</label>
+                    <label><input type="checkbox" name="q11" value="B"> B. 1-3小时</label>
+                    <label><input type="checkbox" name="q11" value="C"> C. 3小时以上</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">12. 你对学校的图书馆资源（书籍、数据库）使用情况是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q12" value="A"> A. 经常使用，能找到需要的资料</label>
+                    <label><input type="checkbox" name="q12" value="B"> B. 偶尔使用，主要查专业相关书籍</label>
+                    <label><input type="checkbox" name="q12" value="C"> C. 很少使用，不清楚资源分布</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">13. 你是否参加过学术相关的活动（如讲座、研讨会、学科竞赛）？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q13" value="A"> A. 参加过多次，收获很大</label>
+                    <label><input type="checkbox" name="q13" value="B"> B. 参加过1-2次，了解基本形式</label>
+                    <label><input type="checkbox" name="q13" value="C"> C. 没参加过，暂时没兴趣或没时间</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">14. 你对老师的教学方式和课堂互动满意度如何？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q14" value="A"> A. 很满意，课堂生动，互动充分</label>
+                    <label><input type="checkbox" name="q14" value="B"> B. 基本满意，大部分老师教学认真</label>
+                    <label><input type="checkbox" name="q14" value="C"> C. 不太满意，部分老师讲课枯燥</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">15. 你对大学考试制度（如考勤、平时成绩、期末考核）的看法是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q15" value="A"> A. 合理，能全面反映学习成果</label>
+                    <label><input type="checkbox" name="q15" value="B"> B. 一般，部分规则（如考勤）可优化</label>
+                    <label><input type="checkbox" name="q15" value="C"> C. 不合理，过于依赖期末考核</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">16. 你目前的学习目标主要是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q16" value="A"> A. 保证不挂科，顺利毕业</label>
+                    <label><input type="checkbox" name="q16" value="B"> B. 争取高分，获得奖学金</label>
+                    <label><input type="checkbox" name="q16" value="C"> C. 扎实掌握专业知识，为未来发展打基础</label>
+                </div>
+            </div>
+
+            <!-- 第三部分：生活与住宿 (7题) -->
+            <div class="section-title">三、生活与住宿</div>
+            <div class="question">
+                <div class="question-title">17. 你对宿舍条件的满意度如何？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q17" value="A"> A. 非常满意，宽敞舒适</label>
+                    <label><input type="checkbox" name="q17" value="B"> B. 基本满意，设施够用</label>
+                    <label><input type="checkbox" name="q17" value="C"> C. 不太满意，希望改善（如空间、卫生、网络）</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">18. 你与室友的相处情况是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q18" value="A"> A. 相处融洽，经常一起活动</label>
+                    <label><input type="checkbox" name="q18" value="B"> B. 相处平和，无矛盾但交流较少</label>
+                    <label><input type="checkbox" name="q18" value="C"> C. 有小矛盾，需磨合或寻求调解</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">19. 你对学校食堂的满意度如何（如口味、价格、卫生）？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q19" value="A"> A. 很满意，选择多且性价比高</label>
+                    <label><input type="checkbox" name="q19" value="B"> B. 基本满意，偶尔会吃外卖</label>
+                    <label><input type="checkbox" name="q19" value="C"> C. 不满意，口味单一或价格偏高</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">20. 你在校内的就餐习惯主要是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q20" value="A"> A. 以食堂为主，很少吃外卖</label>
+                    <label><input type="checkbox" name="q20" value="B"> B. 食堂和外卖交替，看方便程度</label>
+                    <label><input type="checkbox" name="q20" value="C"> C. 经常吃外卖，觉得食堂不合口味</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">21. 你对校园内的生活配套（如超市、快递点、理发店）满意度如何？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q21" value="A"> A. 很满意，种类全且位置方便</label>
+                    <label><input type="checkbox" name="q21" value="B"> B. 基本满意，能满足日常需求</label>
+                    <label><input type="checkbox" name="q21" value="C"> C. 不满意，部分配套缺失或价格高</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-title">22. 你每天的睡眠时间大约是？</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q22" value="A"> A. 7-8小时，作息规律</label>
+                    <label><input type="checkbox" name="q22"
